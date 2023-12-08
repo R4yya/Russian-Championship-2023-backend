@@ -16,6 +16,7 @@ class AppUserManager(BaseUserManager):
 
         return user
 
+
     def create_superuser(self, email, password=None, username=None, age=None):
         if not email:
             raise ValueError('An email is required.')
@@ -39,6 +40,7 @@ class AppUser(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['username']
     objects = AppUserManager()
 
+
     def __str__(self):
         return self.username
 
@@ -48,6 +50,7 @@ class Achievement(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     is_gained = models.BooleanField(default=False)
+
 
     def __str__(self):
         return self.name
