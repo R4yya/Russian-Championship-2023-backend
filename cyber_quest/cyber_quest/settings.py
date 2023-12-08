@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'user_api.apps.UserApiConfig',
+    'quiz',
+    'theory',
 ]
 
 MIDDLEWARE = [
