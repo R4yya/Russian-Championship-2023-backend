@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'user_api.apps.UserApiConfig'
 ]
 
 MIDDLEWARE = [
@@ -96,6 +97,8 @@ DATABASES = {
         'HOST': os.getenv('DB_HOST')
     }
 }
+
+AUTH_USER_MODEL = 'user_api.AppUser'
 
 
 # Password validation
