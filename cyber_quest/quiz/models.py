@@ -28,7 +28,7 @@ class Question(models.Model):
 
 
     def __str__(self):
-        return f'{self.topic} - {self.difficulty}'
+        return self.text
 
 
 class Answer(models.Model):
