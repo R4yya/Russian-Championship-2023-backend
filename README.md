@@ -20,5 +20,11 @@ Cyberkids is a platform designed to teach children cybersecurity knowledge using
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/R4yya/Russian-Championship-2023-backend
+git clone https://github.com/R4yya/Russian-Championship-2023-backend.git
+
+```
+
+1. Ьove to the project directory:
+```bash
 cd cyberkids-the server part
+```
