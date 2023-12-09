@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import permissions, status
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
-from .models import Theory
+from .models import Course
 from .serializers import CourseSerializer
 
 
@@ -13,7 +13,7 @@ class CoursesListView(APIView):
 
 
     def get(self, request):
-        courses = Theory.objects.filter(category='course')
+        courses = Course.objects.all()
         serializer = CourseSerializer(courses, many=True)
 
         return Response(serializer.data, status=status.HTTP_200_OK)

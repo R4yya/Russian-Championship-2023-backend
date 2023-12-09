@@ -1,23 +1,25 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 
-class Theory(models.Model):
-    ARTICLE_CATEGORIES = [
-        ('news', 'News'),
-        ('lecture', 'Lecture'),
-        ('theory', 'Theory'),
-        ('article', 'Article'),
-        ('course', 'Course'),
-    ]
-
-    theory_id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=255, null=False, default='text')
-    sub_title = models.CharField(max_length=255, null=False, default='text')
-    content = models.TextField(default='text')
+class Course(models.Model):
+    course_id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=255)
+    about = models.CharField(max_length=255, null=False, default='text')
+    themes = ArrayField(models.CharField(max_length=255), default=list, blank=True)
     image = models.ImageField(upload_to='article_images/', null=True, blank=True)
-    category = models.CharField(max_length=10, choices=ARTICLE_CATEGORIES)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    price = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
 
-    def __str__(self):
-        return self.title
+
+class Article(models.Model):
+    article_id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='article_images/', null=True, blank=True)
+    content = models.TextField(default='text')
+
+
+class Lecture(models.Model):
+    lecture_id = models.AutoField(primary_key=True)
+    course = models.ForeignKey(Course, related_name='lectures', on_delete=models.CASCADE)
+    title = models.CharField(max_length=255)
+    content = models.TextField(default='text')

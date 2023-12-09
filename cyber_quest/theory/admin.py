@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Theory
+from .models import Course
 
 
-@admin.register(Theory)
-class TheoryAdmin(admin.ModelAdmin):
-    list_display = ('theory_id', 'title', 'sub_title', 'content', 'image', 'category', 'created_at', 'updated_at')
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('course_id', 'title', 'about', 'themes', 'image', 'price')
     search_fields = ('title', 'category')
+    list_display_links = ('title',)
