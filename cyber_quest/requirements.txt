@@ -1,0 +1,5 @@
+Django==4.2.5
+djangorestframework==3.14.0
+djangorestframework_simplejwt==5.3.0
+drf_yasg==1.21.7
+python-dotenv==1.0.0
