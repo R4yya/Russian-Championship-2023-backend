@@ -2,11 +2,11 @@
 
 ## The server part of the CyberTest training platform
 
-This repository supports the backend, a private CyberTest program aimed at children between the ages of 6 and 18.
+This repository contains the backend part of the CyberTest educational platform aimed at children aged 6 to 18 years.
 
 ## Description
 
-CyberTest is a platform designed to teach children cybersecurity knowledge using interactive tools and government courses. The backend provides interaction with the database, processing requests from the front-end and content management.
+CyberTest is a platform designed to teach children the basics of cybersecurity using interactive tasks and exciting courses. The backend provides interaction with the database, processing requests from the front-end and content management.
 
 ## Technologies
 
@@ -42,6 +42,10 @@ python manage.py makemigrations
 python manage.py migrate
 
 ```
+
+5. Specify environment variables in .env file
+
+path - your-path//Russian-Championship-2023-backend/cyberquest/.env
 
 ## Run
 
