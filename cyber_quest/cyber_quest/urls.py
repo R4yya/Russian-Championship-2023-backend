@@ -40,6 +40,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(('user_api.urls', 'user_api'), namespace='user_api')),
     path('api/', include(('theory.urls', 'theory'), namespace='theory')),
+    path('api/', include(('quiz.urls', 'quiz'), namespace='quiz')),
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
