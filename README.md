@@ -10,10 +10,10 @@ CyberTest is a platform designed to teach children the basics of cybersecurity u
 
 ## Technologies
 
-- Django
-- Django REST framework
-- PostgreSQL
-- Swagger
+- Django;
+- Django REST framework;
+- PostgreSQL;
+- Swagger.
 
 ## Installation
 
@@ -43,7 +43,7 @@ python manage.py migrate
 
 ```
 
-5. Specify environment variables in .env file
+5. Specify environment variables in .env file.
 
 path:
 ```bash
@@ -81,7 +81,7 @@ REST API:
 http://localhost:8000/api/
 ```
 
-Admin panel
+Admin panel:
 ```bash
 http://localhost:8000/admin/
 ```
@@ -96,4 +96,4 @@ If you want to contribute to the development of CyberTest, create a branch for n
 We thank everyone who contributes to the development of this project.
 
 ## Frontend
-A frontend client is also implemented for this web service using [this link](https://github.com/Slaik1/Russian-Championship-2023)
+A frontend client is also implemented for this web service using [this link.](https://github.com/Slaik1/Russian-Championship-2023)
