@@ -24,12 +24,12 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="CyberQuest API",
+        title="CyberTest API",
         default_version='v 0.1',
-        description="CyberQuest API description",
-        terms_of_service="https://www.cyberquest.com/terms/",
-        contact=openapi.Contact(email="contact@cyberquest.com"),
-        license=openapi.License(name="CyberQuest License"),
+        description="CyberTest API description",
+        terms_of_service="https://www.cybertest.com/terms/",
+        contact=openapi.Contact(email="contact@cybertest.com"),
+        license=openapi.License(name="Cybertest License"),
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
