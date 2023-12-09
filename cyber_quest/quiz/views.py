@@ -30,7 +30,7 @@ class TestsListView(APIView):
 
                 for question in questions:
                     question_serializer = QuestionSerializer(question)
-                    answers = question.answers.all()  # Фильтруем только правильные ответы
+                    answers = question.answers.all()
                     answer_serializer = AnswerSerializer(answers, many=True)
 
                     questions_list.append({
