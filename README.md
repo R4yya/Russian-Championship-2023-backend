@@ -35,9 +35,23 @@ pip install -r requirements.txt
 
 ```
 
-4. Make migrations:
+4. Make and apply migrations:
 ```bash
 python manage.py makemigrations
+
 python manage.py migrate
 
+```
+
+## Run
+
+Start the backend server:
+```bash
+python manage.py runserver
+
+```
+
+Or specify the desired port (8000 is the default)
+```bash
+python manage.py runserver 0.0.0.0:8000
 ```
