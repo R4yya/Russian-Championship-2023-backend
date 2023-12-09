@@ -24,7 +24,20 @@ git clone https://github.com/R4yya/Russian-Championship-2023-backend.git
 
 ```
 
-1. Ьove to the project directory:
+2. Move to the project directory:
 ```bash
-cd cyberkids-the server part
+cd your-path/Russian-Championship-2023-backend/cyberquest
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+
+```
+
+4. Make migrations:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+
 ```
