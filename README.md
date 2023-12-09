@@ -45,7 +45,10 @@ python manage.py migrate
 
 5. Specify environment variables in .env file
 
-path - your-path//Russian-Championship-2023-backend/cyberquest/.env
+path:
+```bash
+your-path//Russian-Championship-2023-backend/cyberquest/.env
+```
 
 6. Create super user in order to get access to the administration panel
 Use this command and foolow the instructions:
