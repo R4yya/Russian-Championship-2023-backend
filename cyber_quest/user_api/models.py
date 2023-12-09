@@ -54,7 +54,7 @@ class AppUser(AbstractBaseUser, PermissionsMixin):
 class Achievement(models.Model):
     achievement_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     is_gained = models.BooleanField(default=False)
 
 
