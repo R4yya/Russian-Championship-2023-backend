@@ -21,4 +21,3 @@ class TestAdmin(admin.ModelAdmin):
     list_display = ('test_id', 'title', 'course',)
     search_fields = ('title', 'course')
     list_display_links = ('title',)
-
