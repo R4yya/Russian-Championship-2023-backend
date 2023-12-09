@@ -47,6 +47,12 @@ python manage.py migrate
 
 path - your-path//Russian-Championship-2023-backend/cyberquest/.env
 
+6. Create super user in order to get access to the administration panel
+Use this command and foolow the instructions:
+```bash
+python manage.py createsuperuser
+```
+
 ## Run
 
 Start the backend server:
@@ -55,10 +61,28 @@ python manage.py runserver
 
 ```
 
-Or specify the desired port (8000 is the default)
+Or specify the desired port (8000 is the default):
 ```bash
 python manage.py runserver 0.0.0.0:8000
 ```
+
+## Documentation and tools
+
+API documentation is available on Swagger:
+```bash
+http://localhost:8000/swagger/
+```
+
+REST API:
+```bash
+http://localhost:8000/api/
+```
+
+Admin panel
+```bash
+http://localhost:8000/admin/
+```
+
 
 ## Contribution
 
