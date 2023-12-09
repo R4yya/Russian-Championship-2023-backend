@@ -29,6 +29,12 @@ class Lecture(models.Model):
     course = models.ForeignKey(Course, related_name='lectures', on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
+    order = models.IntegerField(default=0)
+
+
+    class Meta:
+        ordering = ['order']
+
 
     def __str__(self):
         return f'{self.title} - {self.course}'
